@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+            <link rel="icon" href="Logo1.png" type="image/png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            color: #000;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            border-color: #4f46e5;
+            outline: none;
+            box-shadow: 0 0 4px rgba(79, 70, 229, 0.5);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #f1c40f;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #000;
+        }
+
+        .footer {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #000;
+        }
+
+        .footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .back-button a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Registro completado");
+            history.back();
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Inicio de Sesión</h2>
+        <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+            </div>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+        </form>
+        <div class="footer">
+            <p>¿No tienes una cuenta? <a href="correo.html">Regístrate</a></p>
+        </div>
+        <div class="back-button">
+            <a href="javascript:history.back()">Volver a la página anterior</a>
+        </div>
+    </div>
+</body>
+</html>
